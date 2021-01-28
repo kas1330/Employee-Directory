@@ -4,6 +4,7 @@ import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
+    {/* how you want things to be laid out */}
     <App />
   </React.StrictMode>,
   document.getElementById("root")
