@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import reactDOM from "react-dom";
+import Header from "./header";
 import Employee from "./employee";
 import API from "./API";
 import "./app.css";
@@ -23,6 +24,7 @@ class App extends Component {
     return (
       <>
         {/* employee(this.state.employeee) */}
+        <Header />
         <Employee emp={this.state.employee} handleSubmit={this.handleSubmit} />;
       </>
     );
