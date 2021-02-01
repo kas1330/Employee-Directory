@@ -1,7 +1,7 @@
 import React from "react";
 function Table(props) {
   return (
-    <table class="table table-striped">
+    <table className="table table-striped">
       <thead>
         <tr>
           <th scope="col">Image</th>
@@ -16,7 +16,7 @@ function Table(props) {
         {props.emp.length > 0 ? (
           props.emp.map((employee) => {
             return (
-              <tr>
+              <tr key={employee.id.value}>
                 <td scope="row">
                   <img src={employee.picture.thumbnail} />{" "}
                 </td>

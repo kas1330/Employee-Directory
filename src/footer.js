@@ -1,2 +1,12 @@
 import React from "react";
-import React, { Component } from "react";
+
+function Footer() {
+  return (
+    <footer>
+      <div className="container">
+        <span className="text-muted"></span>
+      </div>
+    </footer>
+  );
+}
+export default Footer;

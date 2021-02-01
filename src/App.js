@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import reactDOM from "react-dom";
 import Header from "./header";
 import Employee from "./employee";
+import Footer from "./footer";
 import API from "./API";
 import "./app.css";
 class App extends Component {
@@ -19,13 +20,12 @@ class App extends Component {
   }
 
   handleSubmit = (event) => {};
-  //main code will go here
   render() {
     return (
       <>
-        {/* employee(this.state.employeee) */}
         <Header />
         <Employee emp={this.state.employee} handleSubmit={this.handleSubmit} />;
+        <Footer />
       </>
     );
   }
