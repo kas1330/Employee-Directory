@@ -1,9 +1,16 @@
-// import React from "react";
-// import React, { Component } from "react";
+import React from "react";
 
-// const Search = () => {
-//   const [s, setS] = useState("");
-//   return <input type="text" value={s} onChange={setS} />;
-// };
+const Search = (props) => {
+  return (
+    <>
+      <label htmlFor="search">Search</label>
+      <input
+        type="text"
+        value={props.inp}
+        onChange={props.searchFilterOnChange}
+      />
+    </>
+  );
+};
 
-// export default Search;
+export default Search;

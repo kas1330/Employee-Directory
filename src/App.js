@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import reactDOM from "react-dom";
 import Header from "./header";
+import Search from "./searchBar";
 import Employee from "./employee";
 import Footer from "./footer";
 import API from "./API";
@@ -8,6 +9,7 @@ import "./app.css";
 class App extends Component {
   state = {
     employee: [],
+    inputValue: "",
   };
   componentDidMount() {
     console.log("component was born");
@@ -18,13 +20,24 @@ class App extends Component {
       });
     });
   }
+  searchFilterOnChange = (event) => {
+    console.log("OnChange running", event.target.value);
+    this.setState({
+      inputValue: event.target.value,
+    });
+  };
 
-  handleSubmit = (event) => {};
+  // handleSubmit = (event) => {};
   render() {
     return (
       <>
         <Header />
-        <Employee emp={this.state.employee} handleSubmit={this.handleSubmit} />;
+        <Search
+          emp={this.state.employee}
+          inp={this.state.inputValue}
+          searchFilterOnChange={this.searchFilterOnChange}
+        />
+        <Employee emp={this.state.employee} />;
         <Footer />
       </>
     );
