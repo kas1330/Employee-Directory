@@ -25,6 +25,11 @@ class App extends Component {
     this.setState({
       inputValue: event.target.value,
     });
+    this.state.employee.filter((employee) => {
+      return employee.name.first
+        .toLowercase()
+        .include(this.state.inputValue.toLowerCase());
+    });
   };
 
   // handleSubmit = (event) => {};
