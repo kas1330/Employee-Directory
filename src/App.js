@@ -6,9 +6,11 @@ import Employee from "./employee";
 import Footer from "./footer";
 import API from "./API";
 import "./app.css";
+//.sort for alphabetize
 class App extends Component {
   state = {
     employee: [],
+    employeeSort: [],
     inputValue: "",
   };
   componentDidMount() {
@@ -17,6 +19,7 @@ class App extends Component {
       //  console.log(res.data.results);
       this.setState({
         employee: res.data.results,
+        employeeSort: res.data.results,
       });
     });
   }
@@ -25,10 +28,17 @@ class App extends Component {
     this.setState({
       inputValue: event.target.value,
     });
-    this.state.employee.filter((employee) => {
-      return employee.name.first
-        .toLowercase()
-        .include(this.state.inputValue.toLowerCase());
+    let filteredList = this.state.employee.filter((employee) => {
+      let e = employee.name.first.toLowerCase();
+      // console.log("E: ", e);
+      let l = employee.name.last.toLowerCase();
+      return (
+        e.includes(event.target.value.toLowerCase()) ||
+        l.includes(event.target.value.toLowerCase())
+      );
+    });
+    this.setState({
+      employeeSort: filteredList,
     });
   };
 
@@ -38,11 +48,11 @@ class App extends Component {
       <>
         <Header />
         <Search
-          emp={this.state.employee}
+          emp={this.state.employeeSort}
           inp={this.state.inputValue}
           searchFilterOnChange={this.searchFilterOnChange}
         />
-        <Employee emp={this.state.employee} />;
+        <Employee emp={this.state.employeeSort} />;
         <Footer />
       </>
     );

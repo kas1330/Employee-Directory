@@ -7,7 +7,7 @@ const Search = (props) => {
       <input
         type="text"
         value={props.inp}
-        onChange={props.searchFilterOnChange}
+        onChange={(e) => props.searchFilterOnChange(e)}
       />
     </>
   );
