@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Employee-Directory
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src='/public/employeeDirectory.PNG' alt='Employee Directory'>
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+An application to demonstrate the use of indexedDB as a tool of progressive web applications.
 
-### `npm start`
+When you open this application, you will be able to add and subtract money from your budget. If you go offline at any point your transactions will still be reflected on the graph and they will also be saved in indexedDB. When you come back online those transactions will go through and be stored in either Atlas db (if using deployed link) or your Robo3T Mongo db if you're using localhost.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Table of Contents
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [Installation](https://github.com/kas1330/employee-directory#installation)
 
-### `npm test`
+- [Usage](https://github.com/kas1330/employee-directory#usage)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [License](https://github.com/kas1330/employee-directory#license)
 
-### `npm run build`
+- [Contributions](https://github.com/kas1330/employee-directory#contributions)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Testing](https://github.com/kas1330/employee-directory#testing)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Questions](https://github.com/kas1330/employee-directory#questions)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Repo](https://github.com/kas1330/employee-directory#repo)
 
-### `npm run eject`
+- [Deployed](https://github.com/kas1330/employee-directory#deployed)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Installation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Use git clone to copy the repository to your computer. You should then be able to npm install all the needed packages. Then use node server.js to launch the app. You should now be able to view it if you go to localhost:3000 in your browser. Or you can use the link to the deployed app.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Usage
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This purpose of this app is to demonstrate demonstrate the use of indexedDB as a tool of progressive web applications.
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+MIT
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributions
 
-### Code Splitting
+Submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Testing
 
-### Analyzing the Bundle Size
+The easiest way to test the function of the application would be to click on the link to the deployed app on Heroku. You should be able to Add and subtract money and see your amounts populate on the chart. To make sure the offline functionality works, go to your developer tools, click on Application, then click on Service Worker, check the box that says offline. The app should continue functioning the exact same way it had before that. The more difficult way to test would be to git clone the repository and npm install all packages. Then go to the terminal and type in node server.js, you should see "APP running on PORT 3000!". Go to your browser and type in "localhost:3000", this will launch the app, and you should be able to follow the same steps as the deployed version to test the app.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Questions
 
-### Making a Progressive Web App
+https://github.com/kas1330
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+k.sexton804@gmail.com
 
-### Advanced Configuration
+## Repo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+https://github.com/kas1330/Budget-Tracker
 
-### Deployment
+## Deployed
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://budget-tracker234.herokuapp.com/
